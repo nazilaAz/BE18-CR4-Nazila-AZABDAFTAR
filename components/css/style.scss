@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+$logo-Font:'Lobster';
+$nav-a-font:'Righteous',
+cursive;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@media screen and (min-width: 1441px) {
+    body {
+        font-size: 24px;
+    }
+    nav {
+        .navbar-brand {
+            font-family: $logo-Font;
+        }
+        #navbarNav {
+            ul {
+                li {
+                    a {
+                        font-family: 'Righteous', cursive;
+                    }
+                }
+            }
+        }
+    }
+    div.hero {
+        margin: 0 auto;
+        .img-fluid {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+    footer {
+        span {
+            position: relative;
+        }
+        left: 2rem;
+        font-size: large;
+    }
+    .container {
+        .card {
+            font-size: .9rem;
+            .col-sm-5 {
+                align-self: center;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1440px) {
+    body {
+        font-size: 20px;
+    }
+    nav {
+        .navbar-brand {
+            font-family: $logo-Font;
+        }
+        #navbarNav {
+            ul {
+                li {
+                    a {
+                        font-family: 'Righteous', cursive;
+                    }
+                }
+            }
+        }
+    }
+    div.hero {
+        margin: 0 auto;
+        .img-fluid {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+    .container {
+        .card {
+            font-size: .9rem;
+            .col-sm-5 {
+                align-self: center;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    nav {
+        .navbar-brand {
+            font-family: $logo-Font;
+        }
+        #navbarNav {
+            ul {
+                li {
+                    a {
+                        font-family: 'Righteous', cursive;
+                    }
+                }
+            }
+        }
+    }
+    div.hero {
+        margin: 0 auto;
+        .img-fluid {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+    .container {
+        .card {
+            font-size: .9rem;
+            .col-sm-5 {
+                align-self: center;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    nav {
+        .navbar-brand {
+            font-family: $logo-Font;
+        }
+        #navbarNav {
+            ul {
+                li {
+                    a {
+                        font-family: 'Righteous', cursive;
+                    }
+                }
+            }
+        }
+    }
+    div.hero {
+        margin: 0 auto;
+        .img-fluid {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+    .container {
+        .card {
+            font-size: .9rem;
+            .col-sm-5 {
+                align-self: center;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
