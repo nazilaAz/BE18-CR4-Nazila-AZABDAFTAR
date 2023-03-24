@@ -82,7 +82,7 @@ if ($_POST) {
             </div>
             <div class="alert alert-<?=$class;?>" role="alert">
                 <p><?php echo ($message) ?? ''; ?></p>
-                <a href='../index.php'><button class="btn btn-primary" type='button'>Home</button></a>
+                <a href='../readMedia.php'><button class="btn btn-primary" type='button'>Back to list</button></a>
             </div>
         </div>
     </body>
