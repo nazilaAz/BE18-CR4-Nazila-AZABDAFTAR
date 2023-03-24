@@ -34,7 +34,7 @@
         <fieldset>
             <legend class='h2'>Add Media</legend>
             <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
-                <table class='table'>
+                <table class='table table-striped table-light'>
                     <tr>
                         <th>Title</th>
                         <td><input class='form-control' type="text" name="title" placeholder="Book Title" /></td>
@@ -57,19 +57,19 @@
                         <td><textarea class="form-control" rows="3" name="desciption" placeholder="Short Description"></textarea></td>
                     </tr>
                     <tr>
-                        <th>Author</th>
+                        <th>Author Firstname</th>
                         <td><input type="text" class="form-control" id="firstname" name="fname" placeholder="Author_Firstname" /></td>
                     </tr>
                     <tr>
-                        <th>Author</th>
+                        <th>Author Lastname</th>
                         <td><input type="text" class="form-control" id="lastname" name="lname" placeholder="Author_Lastname" /></td>
                     </tr>
                     <tr>
-                        <th>Publicher</th>
+                        <th>Publicher Name</th>
                         <td><input type="text" class="form-control" id="publicherName" name="pname" placeholder="Publicher_Name" /></td>
                     </tr>
                     <tr>
-                        <th>Publicher</th>
+                        <th>Publicher Address</th>
                         <td><textarea class="form-control" rows="3" name="publicheraddress" placeholder="Publicher_Address"></textarea></td>
                     </tr>
                     <tr>
@@ -78,11 +78,11 @@
                     </tr>
                     <tr>
                         <th>Picture</th>
-                        <td><input class='form-control' type="file" name="picture" /></td>
+                        <td><input class='form-control' type="text" name="picture" /></td>
                     </tr>
                     <tr>
                         <td><button class='btn btn-success' type="submit">Insert Product</button></td>
-                        <!-- <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td> -->
+                        <td></td>
                     </tr>
                 </table>
             </form>

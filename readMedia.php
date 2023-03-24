@@ -32,7 +32,7 @@ if (mysqli_num_rows($resultCD)  > 0) {
                 <div class='card-body'>
                     <h5 class='card-title'> {$titleCD} </h5>
                     <p class='card-text'> {$shortDescCD}</p>
-                    <a href='#' class='btn btn-primary'>View Profile</a>
+                    <a href='#' class='btn btn-warning'>Details</a>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@ if (mysqli_num_rows($resultDVD)  > 0) {
                 <div class='card-body'>
                     <h5 class='card-title'> {$titleDVD} </h5>
                     <p class='card-text'> {$shortDescDVD}</p>
-                    <a href='#' class='btn btn-primary'>View Profile</a>
+                    <a href='#' class='btn btn-warning'>Details</a>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@ if (mysqli_num_rows($resultBooks)  > 0) {
                 <div class='card-body'>
                     <h5 class='card-title'> {$titleBook} </h5>
                     <p class='card-text'> {$shortDescBook}</p>
-                    <a href='#' class='btn btn-primary'>View Profile</a>
+                    <a href='#' class='btn btn-warning'>Details</a>
                 </div>
             </div>
         </div>
