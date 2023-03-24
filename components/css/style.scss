@@ -9,6 +9,14 @@ cursive;
     box-sizing: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        color: #bee7d9;
+    }
+}
+
 @media screen and (min-width: 1441px) {
     body {
         font-size: 24px;
@@ -49,46 +57,20 @@ cursive;
                 padding-left: 1rem;
             }
         }
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width:1440px) {
-    body {
-        font-size: 20px;
-    }
-    nav {
-        .navbar-brand {
-            font-family: $logo-Font;
-        }
-        #navbarNav {
-            ul {
-                li {
-                    a {
-                        font-family: 'Righteous', cursive;
-                    }
+        .row {
+            div.card {
+                width: 25rem;
+            }
+            .col {
+                .img-thumbnail {
+                    height: 18rem !important;
                 }
             }
         }
     }
-    div.hero {
-        margin: 0 auto;
-        .img-fluid {
-            width: 100%;
-            height: 70vh;
-        }
-    }
-    .container {
-        .card {
-            font-size: .9rem;
-            .col-sm-5 {
-                align-self: center;
-                padding-left: 1rem;
-            }
-        }
-    }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width:1440px) {
     body {
         font-size: 18px;
     }
@@ -119,6 +101,63 @@ cursive;
             .col-sm-5 {
                 align-self: center;
                 padding-left: 1rem;
+            }
+        }
+        .row {
+            div.card {
+                width: 18rem;
+            }
+            .col {
+                .img-thumbnail {
+                    height: 18rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    nav {
+        font-size: .9rem;
+        .navbar-brand {
+            font-family: $logo-Font;
+        }
+        #navbarNav {
+            ul {
+                li {
+                    a {
+                        font-family: 'Righteous', cursive;
+                    }
+                }
+            }
+        }
+    }
+    div.hero {
+        margin: 0 auto;
+        .img-fluid {
+            width: 100%;
+            height: 70vh;
+        }
+    }
+    .container {
+        .card {
+            font-size: .9rem;
+            .col-sm-5 {
+                align-self: center;
+                padding-left: 1rem;
+            }
+        }
+        .row {
+            div.card {
+                width: 15rem;
+            }
+            .col {
+                .img-thumbnail {
+                    height: 12rem !important;
+                }
             }
         }
     }
@@ -155,6 +194,13 @@ cursive;
             .col-sm-5 {
                 align-self: center;
                 padding-left: 1rem;
+            }
+        }
+        .row {
+            .col {
+                .img-thumbnail {
+                    height: 7rem !important;
+                }
             }
         }
     }

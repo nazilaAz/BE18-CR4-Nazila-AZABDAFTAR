@@ -6,6 +6,14 @@
   box-sizing: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #bee7d9;
+}
+
 @media screen and (min-width: 1441px) {
   body {
     font-size: 24px;
@@ -37,33 +45,14 @@
     align-self: center;
     padding-left: 1rem;
   }
+  .container .row div.card {
+    width: 25rem;
+  }
+  .container .row .col .img-thumbnail {
+    height: 18rem !important;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 1440px) {
-  body {
-    font-size: 20px;
-  }
-  nav .navbar-brand {
-    font-family: "Lobster";
-  }
-  nav #navbarNav ul li a {
-    font-family: "Righteous", cursive;
-  }
-  div.hero {
-    margin: 0 auto;
-  }
-  div.hero .img-fluid {
-    width: 100%;
-    height: 70vh;
-  }
-  .container .card {
-    font-size: 0.9rem;
-  }
-  .container .card .col-sm-5 {
-    align-self: center;
-    padding-left: 1rem;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
   body {
     font-size: 18px;
   }
@@ -86,6 +75,46 @@
   .container .card .col-sm-5 {
     align-self: center;
     padding-left: 1rem;
+  }
+  .container .row div.card {
+    width: 18rem;
+  }
+  .container .row .col .img-thumbnail {
+    height: 18rem !important;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  nav {
+    font-size: 0.9rem;
+  }
+  nav .navbar-brand {
+    font-family: "Lobster";
+  }
+  nav #navbarNav ul li a {
+    font-family: "Righteous", cursive;
+  }
+  div.hero {
+    margin: 0 auto;
+  }
+  div.hero .img-fluid {
+    width: 100%;
+    height: 70vh;
+  }
+  .container .card {
+    font-size: 0.9rem;
+  }
+  .container .card .col-sm-5 {
+    align-self: center;
+    padding-left: 1rem;
+  }
+  .container .row div.card {
+    width: 15rem;
+  }
+  .container .row .col .img-thumbnail {
+    height: 12rem !important;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -111,5 +140,8 @@
   .container .card .col-sm-5 {
     align-self: center;
     padding-left: 1rem;
+  }
+  .container .row .col .img-thumbnail {
+    height: 7rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
