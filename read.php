@@ -66,7 +66,7 @@ mysqli_close($connection);
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="readMedia.php">Books/CDs/DVDs</a>
+                        <a class="nav-link" href="read.php">Books/CDs/DVDs</a>
                     </li>
                 </ul>
             </div>
