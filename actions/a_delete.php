@@ -45,6 +45,9 @@ if ($_POST) {
                     <li class="nav-item">
                         <a class="nav-link" href="../read.php">Books/CDs/DVDs</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../publicher.php">Publicher</a>
+                    </li>
                 </ul>
             </div>
         </div>

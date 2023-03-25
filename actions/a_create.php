@@ -28,12 +28,9 @@ if ($_POST) {
         $status = 0;
        
     }
+    // var_dump($_POST);
+    // die();
 
-
-
-
-
-    // $sqlstr = "INSERT INTO media (name, price, picture) VALUES ('$name', $price,'$picture->fileName')";
 
     $sqlstr = "INSERT INTO `media`(`title`, `image`, `ISBN`, `short_description`, `type`, `author_ first_name`, `author_last_name`, `publisher_ name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title','$picture','$isbn','$desc','$type','$fname','$lname','$pname','$paddress','$pdate','$status')";
     // var_dump($sqlstr);
@@ -83,6 +80,9 @@ if ($_POST) {
                     <li class="nav-item">
                         <a class="nav-link" href="read.php">Books/CDs/DVDs</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicher.php">Publicher</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -95,6 +95,19 @@ if ($_POST) {
             <p><?php echo ($message) ?? ''; ?></p>
             <a href='../read.php'><button class="btn btn-primary" type='button'>Back to list</button></a>
         </div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <i class="bi bi-book"></i>
+                <span class="mb-3 mb-md-0 text-muted">&copy; PHP-Mysql CodeReview, CodeFactory</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><i class="bi bi-twitter"></i></li>
+                <li class="ms-3"><i class="bi bi-facebook"></i></li>
+                <li class="ms-3"><i class="bi bi-instagram"></i></li>
+                <li class="ms-3"><i class="bi bi-youtube"></i></li>
+            </ul>
+        </footer>
     </div>
 </body>
 

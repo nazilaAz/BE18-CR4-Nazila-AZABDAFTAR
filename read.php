@@ -68,6 +68,9 @@ mysqli_close($connection);
                     <li class="nav-item">
                         <a class="nav-link" href="read.php">Books/CDs/DVDs</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publicher.php">Publicher</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -100,7 +103,19 @@ mysqli_close($connection);
                     <?= $tbody; ?>
                 </tbody>
             </table>
-            <!-- <a href="index.php" type="button" role="button" class="btn btn-secondary">Back</a> -->
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <i class="bi bi-book"></i>
+                    <span class="mb-3 mb-md-0 text-muted">&copy; PHP-Mysql CodeReview, CodeFactory</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><i class="bi bi-twitter"></i></li>
+                    <li class="ms-3"><i class="bi bi-facebook"></i></li>
+                    <li class="ms-3"><i class="bi bi-instagram"></i></li>
+                    <li class="ms-3"><i class="bi bi-youtube"></i></li>
+                </ul>
+            </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
