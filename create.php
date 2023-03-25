@@ -49,7 +49,7 @@
                     <tr>
                         <th>Type</th>
                         <td><select class="form-select" aria-label="multiple select example" name="type">
-                                <option selected>--SELECT TYPE--</option>
+                                <!-- <option selected>--SELECT TYPE--</option> -->
                                 <option value="CD">Cd</option>
                                 <option value="DVD">DVD</option>
                                 <option value="Book">Book</option>

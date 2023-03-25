@@ -51,6 +51,19 @@ mysqli_close($connection);
     <title>Read</title>
     <?php require_once 'components/boot.php' ?>
     <link rel="stylesheet" href="components/css/style.css">
+    <style type="text/css">
+        fieldset {
+            margin: auto;
+            margin-top: 100px;
+            width: 60%;
+        }
+
+        .img-thumbnail {
+            width: 70px !important;
+            height: 70px !important;
+        }
+    </style>
+
 </head>
 
 <body>

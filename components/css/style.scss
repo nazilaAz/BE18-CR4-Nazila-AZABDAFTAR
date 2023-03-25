@@ -78,7 +78,7 @@ a {
 
 @media screen and (min-width: 1441px) {
     body {
-        font-size: 24px;
+        font-size: 18px !important;
     }
     nav {
         .navbar-brand {
@@ -101,13 +101,13 @@ a {
             height: 70vh;
         }
     }
-    footer {
-        span {
-            position: relative;
-        }
-        left: 2rem;
-        font-size: large;
-    }
+    // footer {
+    //     span {
+    //         position: relative;
+    //     }
+    //     left: 2rem;
+    //     font-size: large;
+    // }
     .container {
         .card {
             margin: 0 auto;
