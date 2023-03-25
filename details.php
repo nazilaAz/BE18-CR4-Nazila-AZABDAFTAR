@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
     $img = "<img class='img-thumbnail' src='" . $row['image'] . "'>";
     $desc = "{$row['short_description']}";
     $title = "{$row['title']}";
-    $author = "{$row['author_ first_name']} {$row['author_last_name']}";
+    $author = "{$row['author_first_name']} {$row['author_last_name']}";
     $isbn = "{$row['ISBN']}";
 
     if ($row['status'] == 1) {

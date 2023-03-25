@@ -12,9 +12,9 @@ if ($_GET['id']) {
         $image = $row['image'];
         $type = $row['type'];
         $description = $row['short_description'];
-        $fname = $row['author_ first_name'];
+        $fname = $row['author_first_name'];
         $lname = $row['author_last_name'];
-        $puname = $row['publisher_ name'];
+        $puname = $row['publisher_name'];
         $pAdd = $row['publisher_address'];
         $puDate = $row['publish_date'];
 

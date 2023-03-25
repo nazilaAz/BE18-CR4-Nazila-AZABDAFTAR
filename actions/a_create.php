@@ -32,7 +32,7 @@ if ($_POST) {
     // die();
 
 
-    $sqlstr = "INSERT INTO `media`(`title`, `image`, `ISBN`, `short_description`, `type`, `author_ first_name`, `author_last_name`, `publisher_ name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title','$picture','$isbn','$desc','$type','$fname','$lname','$pname','$paddress','$pdate','$status')";
+    $sqlstr = "INSERT INTO `media`(`title`, `image`, `ISBN`, `short_description`, `type`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title','$picture','$isbn','$desc','$type','$fname','$lname','$pname','$paddress','$pdate','$status')";
     // var_dump($sqlstr);
     // die();
 

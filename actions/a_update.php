@@ -21,7 +21,7 @@ if ($_POST) {
     }
 
 
-    $sql = "UPDATE media SET `title`='$title',`image`='$image',`ISBN`='$ISBN',`short_description`='$short_description',`type`='$type',`author_ first_name`='$firstname',`author_last_name`='$lastname',`publisher_ name`='$publishername',`publisher_address`='$publisheraddress',`publish_date`='$publishdate',`status`='$status' WHERE id = {$id}";
+    $sql = "UPDATE media SET `title`='$title',`image`='$image',`ISBN`='$ISBN',`short_description`='$short_description',`type`='$type',`author_first_name`='$firstname',`author_last_name`='$lastname',`publisher_name`='$publishername',`publisher_address`='$publisheraddress',`publish_date`='$publishdate',`status`='$status' WHERE id = {$id}";
     // var_dump($sql);
     // die();
 

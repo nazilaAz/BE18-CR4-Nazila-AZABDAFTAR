@@ -1,32 +1,25 @@
 <?php
-require "actions/db_connect.php";
+include_once "actions/db_connect.php";
 
-$srtSql = "SELECT * FROM `media` GROUP BY `publisher_name` ASC";
-$result = mysqli_query($connection, $srtSql);
+if ($_POST) {
+    $pubname = $_POST['pubname'];
+    $sql = "SELECT * FROM media where publisher_name = '{$pubname}'";
+    $result = mysqli_query($connection, $sql);
 
-$tbody = '';
+    $tbody='';
 
-if (mysqli_num_rows($result)  > 0) {
-    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    $colortd = '';
-    $pubcount = mysqli_num_rows($result);
-
-    foreach ($rows as $row) {
-       
-        $tbody .= "<tr>
-            
+    if (mysqli_num_rows($result)  > 0) {
+        $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach ($rows as $row) {
+            $tbody .= "<tr>
+            <td><img class='img-thumbnail rounded-circle' style='width: 10rem; height: 8.8rem' src='" . $row['image'] . "'</td>
+            <td>" . $row['title'] . "</td>
+            <td>" . $row['short_description'] . "</td>
             <td>" . $row['publisher_name'] . "</td>
-           
-
-            <td>
-            <form action='detailspub.php' method='post' enctype='multipart/form-data'>
-            <button class='btn btn-warning btn-sm' type='submit'>Details</button>
-            <input type='hidden' name='pubname' value='{$row['publisher_name']}' />
-            </form>
-            </td>
-           
+            <td>" . $row['publish_date'] . "</td>
             </tr>";
-    };
+        }
+    }
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
@@ -44,6 +37,18 @@ mysqli_close($connection);
     <title>Read</title>
     <?php require_once 'components/boot.php' ?>
     <link rel="stylesheet" href="components/css/style.css">
+    <style type="text/css">
+        fieldset {
+            margin: auto;
+            margin-top: 100px;
+            width: 60%;
+        }
+
+        .img-thumbnail {
+            width: 70px !important;
+            height: 70px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,16 +81,16 @@ mysqli_close($connection);
                 <thead>
                     <tr>
                         <!-- <th scope="col">#</th> -->
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Publicher</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Publich Date</th>
+                        <!-- <th scope="col">Action</th> -->
                     </tr>
                 </thead>
                 <tbody>
                     <?= $tbody; ?>
-                    <tr>
-                        <td style="font-weight: 700;">There is <?= $pubcount ?> Publicher</td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
