@@ -16,15 +16,26 @@ if ($_POST) {
     $paddress = $_POST['publicheraddress'];
 
     // $pdate = $_POST['pdate'];
-    $pdate = date("Y-m-d",strtotime($_POST['pdate']));
+    $pdate = date("Y-m-d", strtotime($_POST['pdate']));
     $type = $_POST['type'];
+
+
+    
+    if (isset($_POST['available'])) {
+        $status = 1;
+       
+    } else {
+        $status = 0;
+       
+    }
+
 
 
 
 
     // $sqlstr = "INSERT INTO media (name, price, picture) VALUES ('$name', $price,'$picture->fileName')";
 
-    $sqlstr = "INSERT INTO `media`(`title`, `image`, `ISBN`, `short_description`, `type`, `author_ first_name`, `author_last_name`, `publisher_ name`, `publisher_address`, `publish_date`) VALUES ('$title','$picture','$isbn','$desc','$type','$fname','$lname','$pname','$paddress','$pdate')";
+    $sqlstr = "INSERT INTO `media`(`title`, `image`, `ISBN`, `short_description`, `type`, `author_ first_name`, `author_last_name`, `publisher_ name`, `publisher_address`, `publish_date`, `status`) VALUES ('$title','$picture','$isbn','$desc','$type','$fname','$lname','$pname','$paddress','$pdate','$status')";
     // var_dump($sqlstr);
     // die();
 
@@ -57,7 +68,7 @@ if ($_POST) {
     <link rel="stylesheet" href="../components/css/style.scss">
 </head>
 
-    <body>
+<body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand txtFont"><img src="https://cdn-icons-png.flaticon.com/512/9389/9389532.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Public Library</a>
@@ -70,20 +81,21 @@ if ($_POST) {
                         <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="readMedia.php">Books/CDs/DVDs</a>
+                        <a class="nav-link" href="read.php">Books/CDs/DVDs</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-        <div class="container">
-            <div class="mt-3 mb-3">
-                <h1>Create request response</h1>
-            </div>
-            <div class="alert alert-<?=$class;?>" role="alert">
-                <p><?php echo ($message) ?? ''; ?></p>
-                <a href='../readMedia.php'><button class="btn btn-primary" type='button'>Back to list</button></a>
-            </div>
+    <div class="container">
+        <div class="mt-3 mb-3">
+            <h1>Create request response</h1>
         </div>
-    </body>
+        <div class="alert alert-<?= $class; ?>" role="alert">
+            <p><?php echo ($message) ?? ''; ?></p>
+            <a href='../read.php'><button class="btn btn-primary" type='button'>Back to list</button></a>
+        </div>
+    </div>
+</body>
+
 </html>

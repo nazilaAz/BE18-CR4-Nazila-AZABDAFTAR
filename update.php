@@ -1,38 +1,68 @@
+<?php
+require "actions/db_connect.php";
+
+if ($_GET['id']) {
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM media WHERE id = {$id}";
+    $result = mysqli_query($connection, $sql);
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $title = $row['title'];
+        $ISBN = $row['ISBN'];
+        $image = $row['image'];
+    } else {
+        header("location: error.php");
+    }
+    mysqli_close($connection);
+} else {
+    header("location: error.php");
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Media</title>
-    <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" href="components/css/style.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand txtFont"><img src="https://cdn-icons-png.flaticon.com/512/9389/9389532.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Public Library</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="readMedia.php">Books/CDs/DVDs</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-
+<html>
+    <head>
+        <title>Edit</title>
+        <?php require_once 'components/boot.php'?>
+        <style type= "text/css">
+            fieldset {
+                margin: auto;
+                margin-top: 100px;
+                width: 60% ;
+            }  
+            .img-thumbnail{
+                width: 70px !important;
+                height: 70px !important;
+            }     
+        </style>
+    </head>
+    <body>
         <fieldset>
-            <legend class='h2'>Add Media</legend>
+            <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='<?= $image ?>' >"></legend>
+            <form action="actions/a_update.php"  method="post" enctype="multipart/form-data">
+                <table class="table">
+                    <tr>
+                        <th>Title</th>
+                        <td><input class="form-control" type="text"  name="name" placeholder ="Title" value="<?= $title ?>"  /></td>
+                    </tr>
+                    <tr>
+                        <th>ISBN</th>
+                        <td><input class="form-control" type= "text" name="isbn" step="any"  placeholder="ISBN" value ="<?=$ISBN ?>"></td>
+                    </tr>
+                    <tr>
+                        <th>Image</th>
+                        <td><input class="form-control" type="text" name= "image" value="<?= $image ?>" /></td>
+                    </tr>
+                    <tr>
+                        <input type= "hidden" name= "id" value= "<?= $row['id'] ?>" />
+                        <input type= "hidden" name= "image" value= "<?= $row['image'] ?>" />
+                        <td><button class="btn btn-success" type= "submit">Save Changes</button></td>
+                        <td><a href= "read.php"><button class="btn btn-warning" type="button">Back</button></a></td>
+                    </tr>
+                </table>
+            </form>
+
+
             <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
                 <table class='table table-striped table-light'>
                     <tr>
@@ -90,24 +120,7 @@
                     </tr>
                 </table>
             </form>
+
         </fieldset>
-
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <i class="bi bi-book"></i>
-                <span class="mb-3 mb-md-0 text-muted">&copy; PHP-Mysql CodeReview, CodeFactory</span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><i class="bi bi-twitter"></i></li>
-                <li class="ms-3"><i class="bi bi-facebook"></i></li>
-                <li class="ms-3"><i class="bi bi-instagram"></i></li>
-                <li class="ms-3"><i class="bi bi-youtube"></i></li>
-            </ul>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-</body>
-
+    </body>
 </html>
-!

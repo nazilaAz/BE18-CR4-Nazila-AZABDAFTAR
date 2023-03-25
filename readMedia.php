@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require "actions/db_connect.php";
 
 $srtSqlCD = "SELECT * FROM `media` where `type`='CD'";
@@ -233,4 +233,4 @@ if (mysqli_num_rows($resultBooks)  > 0) {
     </script> -->
 </body>
 
-</html>
+</html> -->
